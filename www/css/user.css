@@ -1,0 +1,14 @@
+#upload-photo{
+    display: none;
+}
+
+#plus{
+    position: relative;
+    top: 2px;
+    z-index: -1;
+}
+
+#uniforme{
+    position: absolute;
+    z-index: -100000000;
+}
