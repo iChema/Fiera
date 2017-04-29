@@ -21,16 +21,19 @@
     <meta name="msapplication-tap-highlight" content="no">
 
     <!-- Your app title -->
-    <title>My App</title>
+    <title>La Fiera</title>
 
     <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
         http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
      -->
 
-    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
-    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.material.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.material.colors.min.css">
 
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/user.css">
+    <link rel="stylesheet" href="css/album.css">
+    <link rel="stylesheet" href="css/alineacion.css">
 </head>
 
 <body>
@@ -42,7 +45,104 @@
     <!-- Left panel with reveal effect-->
     <div class="panel panel-left panel-reveal">
         <div class="content-block">
-            <p>Left panel content goes here</p>
+            <div class="view view-main left-view">
+                <div class="content-block-title">
+                    <img class="img-round" src="img/ez.jpg" alt="">
+                </div>
+                <div class="content-block">
+                    <p>This is a side panel. You can close it by clicking outsite or on this link: <a href="#" class="close-panel">close me</a>. You can put here anything, even another isolated view like in <a href="#" data-panel="right" class="open-panel">Right Panel</a></p>
+                </div>
+                <div class="content-block-title">Inicio</div>
+                <div class="list-block">
+                    <ul>
+                        <li class="item-content">
+                            <div class="item-media"><img src="img/iconos/home.png" alt=""></div>
+                            <div class="item-inner">
+                                <a href="#"><div class="item-title">Home</div></a>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="item-media"><img src="img/iconos/perfil.png" alt=""></div>
+                            <div class="item-inner">
+                                <a href="usuario.html"><div class="item-title">Perfil</div></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-block-title">Lo Básico</div>
+                <div class="list-block">
+                    <ul>
+                        <li class="item-content">
+                            <div class="item-media"><img src="img/iconos/FairPlay.png" alt=""></div>
+                            <div class="item-inner">
+                                <a href="fair_play.html"><div class="item-title">Fair Play</div></a>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="item-media"><img src="img/iconos/Nutricion.png" alt=""></div>
+                            <div class="item-inner">
+                                <a href=""><div class="item-title">Nutrición</div></a>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="item-media"><img src="img/iconos/Medicina.png" alt=""></div>
+                            <div class="item-inner">
+                                <a href=""><div class="item-title">Medicina</div></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-block-title">Fiera Puntos</div>
+                <div class="list-block">
+                    <ul>
+                        <li class="item-content">
+                            <div class="item-media"><img src="img/iconos/store.png" alt=""></div>
+                            <div class="item-inner">
+                                <a href=""><div class="item-title">La Guarida</div></a>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="item-media"><img src="img/iconos/Album.png" alt=""></div>
+                            <div class="item-inner">
+                                <a href="album.html"><div class="item-title">Fiera Álbum</div></a>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="item-media"><img src="img/iconos/Medicina.png" alt=""></div>
+                            <div class="item-inner">
+                                <a href=""><div class="item-title">Fiera Logros</div></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-block-title">El Día</div>
+                <div class="list-block">
+                    <ul>
+                        <li class="item-content">
+                            <div class="item-media"><img src="img/iconos/Mialineacion.png" alt=""></div>
+                            <div class="item-inner">
+                                <a href="alineacion.html"><div class="item-title">El 11 ideal</div></a>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="item-media"><img src="img/iconos/mosaico.png" alt=""></div>
+                            <div class="item-inner">
+                                <a href=""><div class="item-title">Fiera Mosaico</div></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list-block">
+                    <ul>
+                        <li class="item-content">
+                            <div class="item-media"><img src="img/iconos/salir.png" alt=""></div>
+                            <div class="item-inner">
+                                <a href="#"><div class="item-title">Cerrar Sesión</div></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -54,7 +154,7 @@
             <div class="navbar">
                 <div class="navbar-inner">
                     <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
-                    <div class="center sliding">Awesome App</div>
+                    <div class="center sliding">Fiera Inicio</div>
                     <div class="right">
                         <!--
                           Right link contains only icon - additional "icon-only" class
@@ -79,13 +179,13 @@
                 </div>
             </div>
             <!-- Bottom Toolbar-->
-            <div class="toolbar">
+            <!--<div class="toolbar">
                 <div class="toolbar-inner">
-                    <!-- Toolbar links -->
+                    <!-- Toolbar links
                     <a href="#" class="link">Link 1</a>
                     <a href="#" class="link">Link 2</a>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
 

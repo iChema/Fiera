@@ -1,0 +1,16 @@
+#campo {
+    width: 114vw;
+    height:70vh;
+    margin-left: -19vw;
+    background: no-repeat;
+}
+
+#campo-contenido {
+    padding-left: 27.5vw;
+    padding-right: 15vw;
+    padding-top: 5vh;
+}
+
+#campo-contenido .row {
+    margin-bottom: 20px;
+}
