@@ -1,5 +1,7 @@
 // Initialize app
-var myApp = new Framework7();
+var myApp = new Framework7({
+    swipePanel: 'left'
+});
 
 
 // If we need to use custom DOM library, let's save it to $$ variable:
@@ -29,6 +31,7 @@ myApp.onPageInit('about', function (page) {
 $$(document).on('pageInit', function (e) {
     // Get page data from event data
     var page = e.detail.page;
+    myApp.closePanel();
 
     if (page.name === 'about') {
         // Following code will be executed for page with data-page attribute equal to "about"
