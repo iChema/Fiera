@@ -1,77 +1,76 @@
-<!-- We don't need a full layout in this file because this page will be parsed with Ajax. -->
-
-<!-- Top Navbar-->
-<div class="navbar theme-teal">
-    <div class="navbar-inner">
-        <div class="left">
-            <a href="#" class="back link">
-                <i class="icon icon-back"></i>
-                <span>Atrás</span>
-            </a>
+<div class="views">
+    <div class="view">
+        <div class="navbar theme-teal">
+            <div class="navbar-inner">
+                <div class="center sliding center">Mi Perfil</div>
+            </div>
         </div>
-        <div class="center sliding">Mi Perfil</div>
-        <div class="right">
-            <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
-        </div>
-    </div>
-</div>
-<div class="pages">
-    <div data-page="mi-alineacion" class="page">
-        <div class="page-content">
-            <div class="content-block">
-                <form id="my-form" class="list-block store-data">
-                    <ul>
-                        <li>
-                            <div class="item-content">
-                                <div class="item-inner">
-                                    <div class="item-title label">Nombre</div>
-                                    <div class="item-input">
-                                        <input type="text" name="name" placeholder="Tu nombre">
+        <div class="pages navbar-through toolbar-through">
+            <div data-page="user" class="page">
+                <div class="page-content">
+                    <div class="content-block">
+                        <br>
+                        <form id="my-form" class="list-block store-data">
+                            <ul>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title label">Nombre</div>
+                                            <div class="item-input">
+                                                <input type="text" name="name" placeholder="Tu nombre">
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-content">
-                                <div class="item-inner">
-                                    <div class="item-title label">Correo</div>
-                                    <div class="item-input">
-                                        <input type="email" name="mail" placeholder="Correo electrónico">
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title label">Correo</div>
+                                            <div class="item-input">
+                                                <input type="email" name="mail" placeholder="Correo electrónico">
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-content">
-                                <div class="item-inner">
-                                    <div class="item-title label">Nivel</div>
-                                    <div class="item-input">
-                                        <input type="text" name="number" readonly>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title label">Nivel</div>
+                                            <div class="item-input">
+                                                <input type="text" name="number" readonly>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-content">
-                                <div class="item-inner">
-                                    <div class="item-title label">Puntos</div>
-                                    <div class="item-input">
-                                        <input type="number" name="points" readonly>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title label">Puntos</div>
+                                            <div class="item-input">
+                                                <input type="number" name="points" readonly>
+                                            </div>
+                                        </div>
                                     </div>
+                                </li>
+                                <li>
+                                    <div align="center" style="margin-top: 10px">
+                                        <label for="input-photo">
+                                            <img src="img/photo.png">
+                                        </label>
+                                        <input type="file" accept="images/*" id="input-photo"/>
+                                    </div>
+                                    <div align="center" id="uniforme">
+                                        <img src="img/jersey.png" width="75%" id="camiseta">
+                                    </div>
+                                </li>
+                                <div align="center">
+                                    <!-- <input class="button button-big" type="submit" name="submit" value="Guardar"/>-->
                                 </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div width="100%" align="center" id="circulo">
-                                <label for="upload-photo" id="plus">+</label>
-                                <input type="file" name="photo" id="upload-photo" accept="image/*"/>
-                            </div>
-                            <div align="center">
-                                <img src="img/jersey.png" width="50%">
-                            </div>
-                        </li>
-                    </ul>
-                </form>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
