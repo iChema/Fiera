@@ -1,14 +1,10 @@
-#upload-photo{
+#input-photo {
     display: none;
 }
 
-#plus{
+#uniforme {
     position: relative;
-    top: 2px;
-    z-index: -1;
-}
-
-#uniforme{
-    position: absolute;
+    top: -30px;
+    left: 4px;
     z-index: -100000000;
 }
