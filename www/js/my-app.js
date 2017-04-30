@@ -46,49 +46,96 @@ $$(document).on('pageInit', function (e) {
     if (page.name == 'fairplay') {
         var preguntas = [
             {
-                titulo: '¿Cuál es tu nombre?',
-                respuesta: 'Leonardo',
+                titulo: '¿Cuántas tarjetas amarillas se necesitan para una expulsión?',
+                respuesta: '2',
                 correcta: false
             },
             {
-                titulo: '¿Cuál es tu apellido?',
-                respuesta: 'Lira',
+                titulo: '¿Cuándo un jugador sobrepasa la línea defensiva, qué violación se marca?',
+                respuesta: 'Fuera de lugar',
                 correcta: false
             },
             {
-                titulo: '¿Cuál es tu apellido segundo?',
-                respuesta: 'Becerra',
+                titulo: '¿Qué significado tiene la tarjeta roja?',
+                respuesta: 'Expulsión',
                 correcta: false
             }
         ];
 
         var choose = Math.floor(Math.random() * 2);
         if (!preguntas[choose].correcta) {
-            var html = '' +
-                '<div class="list-block">' +
-                    '<ul>' +
-                        '<li>' +
-                            '<div class="item-content">' +
-                                '<div class="item-inner">' +
-                                    '<div class="item-title color-teal">' + preguntas[choose].titulo + '</div>' +
-                                '</div>' +
-                                '<div class="item-inner">' +
-                                    '<div class="item-input">' +
-                                        '<input type="text" name="name" onchange="' +
-                                        ' if(this.val() == preguntas[choose].respuesta) {' +
-                                            'preguntas[choose].correcta = true;' +
-                                            'myApp.alert(\'Tu respuesa es correcta!\');' +
-                                        '} else {' +
-                                            'preguntas[choose].correcta = false;' +
-                                            'myApp.alert(\'Tu respuesa es incorrecta.\');' +
-                                        '} " placeholder="Respuesta">' +
-                                    '</div>' +
-                                '</div>' +
-                            '</div>' +
-                        '</li>' +
-                    '</ul>'+
-                '</div>';
-            myApp.alert(html);
+            myApp.prompt(preguntas[choose].titulo, 'Pregunta', function (value) {
+                if (value == preguntas[choose].respuesta) {
+                    preguntas[choose].correcta = true;
+                    myApp.alert('Tu respuesta es correcta', '¡Felicidades!');
+                } else {
+                    myApp.alert('Tu respuesta es incorrecta', '¡Lo siento!');
+                }
+            });
+        }
+    }
+
+    if (page.name == 'salud') {
+        var preguntas = [
+            {
+                titulo: '¿Cuántos litros de agua debes tomar diariamente?',
+                respuesta: '2',
+                correcta: false
+            },
+            {
+                titulo: '¿Cuántos minutos de ejercicio debes realizar al día?',
+                respuesta: '30',
+                correcta: false
+            },
+            {
+                titulo: '¿Es bueno para los jugadores consumir sustancias ajenas a su dieta?',
+                respuesta: 'No',
+                correcta: false
+            }
+        ];
+
+        var choose = Math.floor(Math.random() * 2);
+        if (!preguntas[choose].correcta) {
+            myApp.prompt(preguntas[choose].titulo, 'Pregunta', function (value) {
+                if (value == preguntas[choose].respuesta) {
+                    preguntas[choose].correcta = true;
+                    myApp.alert('Tu respuesta es correcta', '¡Felicidades!');
+                } else {
+                    myApp.alert('Tu respuesta es incorrecta', '¡Lo siento!');
+                }
+            });
+        }
+    }
+
+    if (page.name == 'nutricion') {
+        var preguntas = [
+            {
+                titulo: '¿Cuántos calorias son recomendadas para una buena salud en una persona deportista promedio?',
+                respuesta: '2600',
+                correcta: false
+            },
+            {
+                titulo: '¿Crees que los fútbolistas lleven alguna dieta para su salud?',
+                respuesta: 'Si',
+                correcta: false
+            },
+            {
+                titulo: '¿Es bueno para los jugadores consumir alimentos altos en carbohídratos',
+                respuesta: 'No',
+                correcta: false
+            }
+        ];
+
+        var choose = Math.floor(Math.random() * 2);
+        if (!preguntas[choose].correcta) {
+            myApp.prompt(preguntas[choose].titulo, 'Pregunta', function (value) {
+                if (value == preguntas[choose].respuesta) {
+                    preguntas[choose].correcta = true;
+                    myApp.alert('Tu respuesta es correcta', '¡Felicidades!');
+                } else {
+                    myApp.alert('Tu respuesta es incorrecta', '¡Lo siento!');
+                }
+            });
         }
     }
 });
