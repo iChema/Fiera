@@ -151,65 +151,25 @@
 <!-- Views -->
 <div class="views">
     <!-- Your main view, should have "view-main" class -->
-    <div class="view view-main">
+    <div class="view">
+        <div class="navbar theme-teal">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                </div>
+                <div class="center sliding" id="titulo-fiera">La Fiera</div>
+            </div>
+        </div>
         <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
         <div class="pages navbar-through toolbar-through">
-            <!-- Page, "data-page" contains page name -->
-            <div data-page="index" class="page">
-                <!-- Scrollable page content -->
-                <div class="login-screen modal-in">
-                    <!-- Default view-page layout -->
-                    <div class="view">
-                        <div class="page">
-                            <!-- page-content has additional login-screen content -->
-                            <div class="page-content login-screen-content">
-                                <div class="content-block">
-                                    <div class="row">
-                                        <div class="col-25"></div>
-                                        <div class="col-50">
-                                            <img data-src="img/logo_app_2.jpg" width="100%" class="lazy lazy-fadeIn">
-                                        </div>
-                                        <div class="col-25"></div>
-                                    </div>
-                                    <div class="login-screen-title">La Fiera</div>
-                                    <!-- Login form -->
-                                    <form>
-                                        <div class="list-block">
-                                            <ul>
-                                                <li class="item-content">
-                                                    <div class="item-inner">
-                                                        <div class="item-title label">Correo:</div>
-                                                        <div class="item-input">
-                                                            <input type="text" name="username" placeholder="usuario@ejemplo.com">
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="item-content">
-                                                    <div class="item-inner">
-                                                        <div class="item-title label">Contraseña:</div>
-                                                        <div class="item-input">
-                                                            <input type="password" name="password" placeholder="">
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="list-block" align="center">
-                                            <ul>
-                                                <li>
-                                                    <p class="buttons-row">
-                                                        <a href="inicio.html" class="button button-fill color-black">Iniciar Sesión</a>
-                                                    </p>
-                                                </li>
-                                            </ul>
-                                            <p class="buttons-row">
-                                                <a href="#" class="button color-black">¿No tienes cuenta?, Registrate</a>
-                                            </p>
-                                        </div>
-                                    </form>
-                                </div>
-                                </div>
-                        </div>
+            <div data-page="usuario" class="page">
+                <div class="page-content">
+                    <div class="content-block">
+                        <p></p>
+                        <a class="twitter-timeline" data-link-color="#19CF86" href="https://twitter.com/clubleonfc">Tweets by clubleonfc</a> <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        <p>Page content goes here</p>
+                        <!-- Link to another page -->
+                        <a href="about.html"></a>
                     </div>
                 </div>
             </div>
@@ -222,3 +182,53 @@
 </body>
 
 </html>
+
+<!-- Parte de Login -->
+
+<!--<div class="page-content login-screen-content">
+    <div class="content-block">
+        <div class="row">
+            <div class="col-25"></div>
+            <div class="col-50">
+                <img data-src="img/logo_app_2.jpg" width="100%" class="lazy lazy-fadeIn">
+            </div>
+            <div class="col-25"></div>
+        </div>
+        <div class="login-screen-title">La Fiera</div>
+        <!-- Login form
+        <form>
+            <div class="list-block">
+                <ul>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title label">Correo:</div>
+                            <div class="item-input">
+                                <input type="text" name="username" placeholder="usuario@ejemplo.com">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title label">Contraseña:</div>
+                            <div class="item-input">
+                                <input type="password" name="password" placeholder="">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="list-block" align="center">
+                <ul>
+                    <li>
+                        <p class="buttons-row">
+                            <a href="inicio.html" class="button button-fill color-teal">Iniciar Sesión</a>
+                        </p>
+                    </li>
+                </ul>
+                <p class="buttons-row">
+                    <a href="#" class="button color-black">Registrarme</a>
+                </p>
+            </div>
+        </form>
+    </div>
+</div>-->
