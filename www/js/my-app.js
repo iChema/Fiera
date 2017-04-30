@@ -38,6 +38,10 @@ $$(document).on('pageInit', function (e) {
         // Following code will be executed for page with data-page attribute equal to "about"
         myApp.alert('Here comes About page');
     }
+
+    if (page.name == 'login') {
+        myApp.params.swipePanel = false;
+    }
 });
 
 // Option 2. Using live 'pageInit' event handlers for each page
