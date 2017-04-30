@@ -3,6 +3,60 @@ var myApp = new Framework7({
     swipePanel: 'left'
 });
 
+var preguntasFairPlay = [
+    {
+        titulo: '¿Cuántas tarjetas amarillas se necesitan para una expulsión?',
+        respuesta: '2',
+        correcta: false
+    },
+    {
+        titulo: '¿Cuándo un jugador sobrepasa la línea defensiva, qué violación se marca?',
+        respuesta: 'Fuera de lugar',
+        correcta: false
+    },
+    {
+        titulo: '¿Qué significado tiene la tarjeta roja?',
+        respuesta: 'Expulsión',
+        correcta: false
+    }
+];
+
+var preguntasSalud = [
+    {
+        titulo: '¿Cuántos litros de agua debes tomar diariamente?',
+        respuesta: '2',
+        correcta: false
+    },
+    {
+        titulo: '¿Cuántos minutos de ejercicio debes realizar al día?',
+        respuesta: '30',
+        correcta: false
+    },
+    {
+        titulo: '¿Es bueno para los jugadores consumir sustancias ajenas a su dieta?',
+        respuesta: 'No',
+        correcta: false
+    }
+];
+
+var preguntasNutricion = [
+    {
+        titulo: '¿Cuántos calorias son recomendadas para una buena salud en una persona deportista promedio?',
+        respuesta: '2600',
+        correcta: false
+    },
+    {
+        titulo: '¿Crees que los fútbolistas lleven alguna dieta para su salud?',
+        respuesta: 'Si',
+        correcta: false
+    },
+    {
+        titulo: '¿Es bueno para los jugadores consumir alimentos altos en carbohídratos',
+        respuesta: 'No',
+        correcta: false
+    }
+];
+
 
 // If we need to use custom DOM library, let's save it to $$ variable:
 var $$ = Dom7;
@@ -44,29 +98,11 @@ $$(document).on('pageInit', function (e) {
     }
 
     if (page.name == 'fairplay') {
-        var preguntas = [
-            {
-                titulo: '¿Cuántas tarjetas amarillas se necesitan para una expulsión?',
-                respuesta: '2',
-                correcta: false
-            },
-            {
-                titulo: '¿Cuándo un jugador sobrepasa la línea defensiva, qué violación se marca?',
-                respuesta: 'Fuera de lugar',
-                correcta: false
-            },
-            {
-                titulo: '¿Qué significado tiene la tarjeta roja?',
-                respuesta: 'Expulsión',
-                correcta: false
-            }
-        ];
-
-        var choose = Math.floor(Math.random() * 2);
-        if (!preguntas[choose].correcta) {
-            myApp.prompt(preguntas[choose].titulo, 'Pregunta', function (value) {
-                if (value == preguntas[choose].respuesta) {
-                    preguntas[choose].correcta = true;
+        var choose = Math.floor(Math.random() * preguntasFairPlay.length);
+        if (!preguntasFairPlay[choose].correcta) {
+            myApp.prompt(preguntasFairPlay[choose].titulo, 'Pregunta', function (value) {
+                if (value == preguntasFairPlay[choose].respuesta) {
+                    preguntasFairPlay[choose].correcta = true;
                     myApp.alert('Tu respuesta es correcta', '¡Felicidades!');
                 } else {
                     myApp.alert('Tu respuesta es incorrecta', '¡Lo siento!');
@@ -76,29 +112,11 @@ $$(document).on('pageInit', function (e) {
     }
 
     if (page.name == 'salud') {
-        var preguntas = [
-            {
-                titulo: '¿Cuántos litros de agua debes tomar diariamente?',
-                respuesta: '2',
-                correcta: false
-            },
-            {
-                titulo: '¿Cuántos minutos de ejercicio debes realizar al día?',
-                respuesta: '30',
-                correcta: false
-            },
-            {
-                titulo: '¿Es bueno para los jugadores consumir sustancias ajenas a su dieta?',
-                respuesta: 'No',
-                correcta: false
-            }
-        ];
-
-        var choose = Math.floor(Math.random() * 2);
-        if (!preguntas[choose].correcta) {
-            myApp.prompt(preguntas[choose].titulo, 'Pregunta', function (value) {
-                if (value == preguntas[choose].respuesta) {
-                    preguntas[choose].correcta = true;
+        var choose = Math.floor(Math.random() * preguntasSalud.length);
+        if (!preguntasSalud[choose].correcta) {
+            myApp.prompt(preguntasSalud[choose].titulo, 'Pregunta', function (value) {
+                if (value == preguntasSalud[choose].respuesta) {
+                    preguntasSalud[choose].correcta = true;
                     myApp.alert('Tu respuesta es correcta', '¡Felicidades!');
                 } else {
                     myApp.alert('Tu respuesta es incorrecta', '¡Lo siento!');
@@ -108,29 +126,11 @@ $$(document).on('pageInit', function (e) {
     }
 
     if (page.name == 'nutricion') {
-        var preguntas = [
-            {
-                titulo: '¿Cuántos calorias son recomendadas para una buena salud en una persona deportista promedio?',
-                respuesta: '2600',
-                correcta: false
-            },
-            {
-                titulo: '¿Crees que los fútbolistas lleven alguna dieta para su salud?',
-                respuesta: 'Si',
-                correcta: false
-            },
-            {
-                titulo: '¿Es bueno para los jugadores consumir alimentos altos en carbohídratos',
-                respuesta: 'No',
-                correcta: false
-            }
-        ];
-
-        var choose = Math.floor(Math.random() * 2);
-        if (!preguntas[choose].correcta) {
-            myApp.prompt(preguntas[choose].titulo, 'Pregunta', function (value) {
-                if (value == preguntas[choose].respuesta) {
-                    preguntas[choose].correcta = true;
+        var choose = Math.floor(Math.random() * preguntasNutricion.length);
+        if (!preguntasNutricion[choose].correcta) {
+            myApp.prompt(preguntasNutricion[choose].titulo, 'Pregunta', function (value) {
+                if (value == preguntasNutricion[choose].respuesta) {
+                    preguntasNutricion[choose].correcta = true;
                     myApp.alert('Tu respuesta es correcta', '¡Felicidades!');
                 } else {
                     myApp.alert('Tu respuesta es incorrecta', '¡Lo siento!');
