@@ -42,6 +42,55 @@ $$(document).on('pageInit', function (e) {
     if (page.name == 'login') {
         myApp.params.swipePanel = false;
     }
+
+    if (page.name == 'fairplay') {
+        var preguntas = [
+            {
+                titulo: '¿Cuál es tu nombre?',
+                respuesta: 'Leonardo',
+                correcta: false
+            },
+            {
+                titulo: '¿Cuál es tu apellido?',
+                respuesta: 'Lira',
+                correcta: false
+            },
+            {
+                titulo: '¿Cuál es tu apellido segundo?',
+                respuesta: 'Becerra',
+                correcta: false
+            }
+        ];
+
+        var choose = Math.floor(Math.random() * 2);
+        if (!preguntas[choose].correcta) {
+            var html = '' +
+                '<div class="list-block">' +
+                    '<ul>' +
+                        '<li>' +
+                            '<div class="item-content">' +
+                                '<div class="item-inner">' +
+                                    '<div class="item-title color-teal">' + preguntas[choose].titulo + '</div>' +
+                                '</div>' +
+                                '<div class="item-inner">' +
+                                    '<div class="item-input">' +
+                                        '<input type="text" name="name" onchange="' +
+                                        ' if(this.val() == preguntas[choose].respuesta) {' +
+                                            'preguntas[choose].correcta = true;' +
+                                            'myApp.alert(\'Tu respuesa es correcta!\');' +
+                                        '} else {' +
+                                            'preguntas[choose].correcta = false;' +
+                                            'myApp.alert(\'Tu respuesa es incorrecta.\');' +
+                                        '} " placeholder="Respuesta">' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>' +
+                        '</li>' +
+                    '</ul>'+
+                '</div>';
+            myApp.alert(html);
+        }
+    }
 });
 
 // Option 2. Using live 'pageInit' event handlers for each page
