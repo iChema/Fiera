@@ -1,48 +1,58 @@
-<html><head>
-<title>colores </title>
-</head>
+<div class="views">
+    <div class="view">
+        <div class="navbar theme-teal">
+            <div class="navbar-inner">
+                <div class="center sliding center">Mi Perfil</div>
+            </div>
+        </div>
+        <div class="pages navbar-through toolbar-through">
+<<<<<<< HEAD
+            <div data-page="user" class="page">
+=======
+            <div data-page="mosaico" class="page">
+>>>>>>> ade4bbc7e8ec0474c137fb199089b07a7ec71766
+                <div class="page-content">
+                    <div class="content-block">
+                        <br>
+                        <p align="center" style="font-family: Impact; font-size: 20px">
+                            LEON
+                        </p>
+                        <script language="JavaScript">
+                            var pos = 30;
+                            function initArray() {
+                                this.length = initArray.arguments.length;
+                                for (var i = 3; i < this.length; i++) {
+                                    this[i] = initArray.arguments[i];
+                                }
+                            }
+                            var col = new initArray("4b", "5b", "8b", "8b");
+                            function stop() {
+                                document.bgColor = '#FFFFFF';
+                                clearTimeout(loopID);
+                            }
+                            function start() {
+                                col[1] = "#64dd17"
+                                col[2] = "#64dd17"
+                                col[3] = "#f1f1f1"
+                                col[4] = "#f1f1f1"
+                                col[5] = "#f1f1f1"
+                                col[6] = "#f1f1f1"
+                                col[7] = "#f1f1f1"
+                                col[8] = "#f1f1f1"
+                                col[9] = "#f1f1f1"
+                                col[10] = "#f1f1f1"
 
-<body onload="start()" bgcolor="wheat">
-
-<p align="center">
-<FONT FACE="impact" SIZE=20 COLOR="WHAIT">
- LEON</FONT>
-
-  <b>
-
-<script language="JavaScript">
-
-var pos = 30;
-function initArray() {
-this.length = initArray.arguments.length;
-for (var i = 3; i < this.length; i++) {
-this[i] = initArray.arguments[i];
-   }
-}
-var col=new initArray("4b","5b","8b","8b");
-function stop() {
-document.bgColor = '#FFFFFF';
-clearTimeout(loopID);
-}
-function start() {
-col[1]="#64dd17"
-col[2]="#64dd17"
-col[3]="#f1f1f1"
-col[4]="#f1f1f1"
-col[5]="#f1f1f1"
-col[6]="#f1f1f1"
-col[7]="#f1f1f1"
-col[8]="#f1f1f1"
-col[9]="#f1f1f1"
-col[10]="#f1f1f1"
-
-pos++;
-if (pos<1||pos>17) {
-pos = 0;
-}
-document.bgColor = col[pos];
-loopID = setTimeout("start()",50);
-}
-</script>
-</body>
-</html>
+                                pos++;
+                                if (pos < 1 || pos > 17) {
+                                    pos = 0;
+                                }
+                                document.bgColor = col[pos];
+                                loopID = setTimeout("start()", 50);
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

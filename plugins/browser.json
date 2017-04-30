@@ -15,6 +15,9 @@
         },
         "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "com.app.fiera"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.app.fiera"
         }
     },
     "dependent_plugins": {}

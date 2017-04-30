@@ -14,3 +14,17 @@
 #campo-contenido .row {
     margin-bottom: 40px;
 }
+
+#boton-panel-jugadores {
+    padding-left: 24vw;
+    width: 80vw;
+}
+
+#aviso-jugadores {
+    padding-left: 24vw;
+    font-size: 12px;
+}
+
+#cerrar-jugadores {
+    margin-right: 10px;
+}

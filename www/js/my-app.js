@@ -16,6 +16,7 @@ var mainView = myApp.addView('.view-main', {
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
     console.log("Device is ready!");
+    welcomescreen.open();
 });
 
 
@@ -25,7 +26,7 @@ $$(document).on('deviceready', function() {
 myApp.onPageInit('about', function (page) {
     // Do something here for "about" page
 
-})
+});
 
 // Option 2. Using one 'pageInit' event handler for all pages:
 $$(document).on('pageInit', function (e) {
@@ -37,10 +38,14 @@ $$(document).on('pageInit', function (e) {
         // Following code will be executed for page with data-page attribute equal to "about"
         myApp.alert('Here comes About page');
     }
-})
+
+    if (page.name == 'login') {
+        myApp.params.swipePanel = false;
+    }
+});
 
 // Option 2. Using live 'pageInit' event handlers for each page
 $$(document).on('pageInit', '.page[data-page="about"]', function (e) {
     // Following code will be executed for page with data-page attribute equal to "about"
     myApp.alert('Here comes About page');
-})
+});

@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
+
+<html>      
+      <!--
+            Some notes:
             * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
             * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
@@ -43,14 +40,16 @@
     <!-- Panels overlay-->
     <div class="panel-overlay"></div>
     <!-- Left panel with reveal effect-->
-    <div class="panel panel-left panel-reveal theme-teal">
+    <div class="panel panel-left panel-reveal theme-white">
         <div class="content-block">
             <div class="view view-main left-view">
                 <div class="content-block-title">
                     <img class="img-round" src="img/ez.jpg" alt="">
                 </div>
                 <div class="content-block">
-                    <p>This is a side panel. You can close it by clicking outsite or on this link: <a href="#" class="close-panel">close me</a>. You can put here anything, even another isolated view like in <a href="#" data-panel="right" class="open-panel">Right Panel</a></p>
+                    <div class="item-media datos"><img src="img/iconos/user.png" alt="">  Mauro Boselli</div>
+                    <div class="item-media datos"><img src="img/iconos/mail.png" alt="">  mauro@clubleon.mx</div>
+                    <div class="item-media datos"><img src="img/iconos/level.png" alt=""> Capitán</div>
                 </div>
                 <div class="content-block-title">Inicio</div>
                 <div class="list-block">
@@ -58,7 +57,7 @@
                         <li class="item-content">
                             <div class="item-media"><img src="img/iconos/home.png" alt=""></div>
                             <div class="item-inner">
-                                <a href="#"><div class="item-title">Home</div></a>
+                                <a href="index.html"><div class="item-title">Home</div></a>
                             </div>
                         </li>
                         <li class="item-content">
@@ -98,7 +97,7 @@
                         <li class="item-content">
                             <div class="item-media"><img src="img/iconos/store.png" alt=""></div>
                             <div class="item-inner">
-                                <a href=""><div class="item-title">La Guarida</div></a>
+                                <a href="laguarida.html"><div class="item-title">La Guarida</div></a>
                             </div>
                         </li>
                         <li class="item-content">
@@ -137,7 +136,7 @@
                         <li class="item-content">
                             <div class="item-media"><img src="img/iconos/salir.png" alt=""></div>
                             <div class="item-inner">
-                                <a href="#"><div class="item-title">Cerrar Sesión</div></a>
+                                <a href="login.html" class="open-login-screen"><div class="item-title">Cerrar Sesión</div></a>
                             </div>
                         </li>
                     </ul>
@@ -174,9 +173,83 @@
                     <!-- Scrollable page content -->
                     <div class="page-content">
                         <div class="content-block">
-                            <p>Page content goes here</p>
-                            <!-- Link to another page -->
-                            <a href="about.html">About app</a>
+                            <div style="margin-top:70px;"></div>
+                            <div class="card facebook-card">
+                              <div class="card-header">
+                                <div class="facebook-avatar"><img src="img/escudoIndex.jpg" width="34" height="34"></div>
+                                <div class="facebook-name">Club León Oficial </div>
+                                <div class="facebook-date">5h</div>
+                              </div>
+                              <div class="card-content">
+                                <div class="card-content-inner">
+                                  <p>Te compartimos algunas imágenes del partido disputado ante Chivas en la #J16 de la LIGA Bancomer MX.</p>
+                                  <img src="img/new1.jpg" width="100%">
+                                  <p class="color-gray">Likes: 497    Comments: 7</p>
+                                </div>
+                              </div>
+                              <div class="card-footer">
+                                <a href="#" class="link">Like</a>
+                                <a href="#" class="link">Comment</a>
+                                <a href="#" class="link">Share</a>
+                              </div>
+                            </div>  
+                            <div class="card facebook-card">
+                              <div class="card-header">
+                                <div class="facebook-avatar"><img src="img/escudoIndex.jpg" width="34" height="34"></div>
+                                <div class="facebook-name">Club León Oficial </div>
+                                <div class="facebook-date">8h</div>
+                              </div>
+                              <div class="card-content">
+                                <div class="card-content-inner">
+                                  <p>90' Telcel informa: Chivas 1 - 1 León. #RugeLeón #J16 #GDLvsLEO</p>
+                                  <img src="img/new2.jpg" width="100%">
+                                  <p class="color-gray">Likes: 112    Comments: 43</p>
+                                </div>
+                              </div>
+                              <div class="card-footer">
+                                <a href="#" class="link">Like</a>
+                                <a href="#" class="link">Comment</a>
+                                <a href="#" class="link">Share</a>
+                              </div>
+                            </div>
+                            <div class="card facebook-card">
+                              <div class="card-header">
+                                <div class="facebook-avatar"><img src="img/escudoIndex.jpg" width="34" height="34"></div>
+                                <div class="facebook-name">Club León Oficial </div>
+                                <div class="facebook-date">8h</div>
+                              </div>
+                              <div class="card-content">
+                                <div class="card-content-inner">
+                                  <p>Pirma te presenta el marcador final del partido. #RugeLeón #J16 #GDLvsLEO</p>
+                                  <img src="img/new3.jpg" width="100%">
+                                  <p class="color-gray">Likes: 352    Comments: 65</p>
+                                </div>
+                              </div>
+                              <div class="card-footer">
+                                <a href="#" class="link">Like</a>
+                                <a href="#" class="link">Comment</a>
+                                <a href="#" class="link">Share</a>
+                              </div>
+                            </div> 
+                            <div class="card facebook-card">
+                              <div class="card-header">
+                                <div class="facebook-avatar"><img src="img/escudoIndex.jpg" width="34" height="34"></div>
+                                <div class="facebook-name">Club León Oficial </div>
+                                <div class="facebook-date">9h</div>
+                              </div>
+                              <div class="card-content">
+                                <div class="card-content-inner">
+                                  <p>Mauro Boselli anota su gol 91 con la camiseta de nuestro equipo. #RugeLeón #J16 #GDLvsLEO</p>
+                                  <img src="img/new4.jpg" width="100%">
+                                  <p class="color-gray">Likes: 820    Comments: 46</p>
+                                </div>
+                              </div>
+                              <div class="card-footer">
+                                <a href="#" class="link">Like</a>
+                                <a href="#" class="link">Comment</a>
+                                <a href="#" class="link">Share</a>
+                              </div>
+                            </div> 
                         </div>
                     </div>
                 </div>
