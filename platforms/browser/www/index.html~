@@ -10,7 +10,6 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
 
     <!-- Required meta tags-->
     <meta charset="utf-8">
@@ -50,15 +49,17 @@
                     <img class="img-round" src="img/ez.jpg" alt="">
                 </div>
                 <div class="content-block">
-                    <p>This is a side panel. You can close it by clicking outsite or on this link: <a href="#" class="close-panel">close me</a>. You can put here anything, even another isolated view like in <a href="#" data-panel="right" class="open-panel">Right Panel</a></p>
-                </div>
+                    <div class="item-media"><img src="img/iconos/user.png" alt="">  Mauro Boselli</div>
+                    <div class="item-media"><img src="img/iconos/mail.png" alt="">  mauro@clubleon.mx</div>
+                    <div class="item-media"><img src="img/iconos/level.png" alt=""> Capitán</div>
+               </div>
                 <div class="content-block-title">Inicio</div>
                 <div class="list-block">
                     <ul>
                         <li class="item-content">
                             <div class="item-media"><img src="img/iconos/home.png" alt=""></div>
                             <div class="item-inner">
-                                <a href="#"><div class="item-title">Home</div></a>
+                                <a href="index.html"><div class="item-title">Inicio</div></a>
                             </div>
                         </li>
                         <li class="item-content">
@@ -110,7 +111,7 @@
                         <li class="item-content">
                             <div class="item-media"><img src="img/iconos/trophy.png" alt=""></div>
                             <div class="item-inner">
-                                <a href=""><div class="item-title">Fiera Logros</div></a>
+                                <a href="fieralogros.html"><div class="item-title">Fiera Logros</div></a>
                             </div>
                         </li>
                     </ul>
@@ -174,21 +175,11 @@
                     <!-- Scrollable page content -->
                     <div class="page-content">
                         <div class="content-block">
-                            <p>Page content goes here</p>
-                            <!-- Link to another page -->
-                            <a href="about.html">About app</a>
+                            <a class="twitter-timeline" data-link-color="#19CF86" href="https://twitter.com/clubleonfc">Tweets by clubleonfc</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Bottom Toolbar-->
-            <!--<div class="toolbar">
-                <div class="toolbar-inner">
-                    <!-- Toolbar links
-                    <a href="#" class="link">Link 1</a>
-                    <a href="#" class="link">Link 2</a>
-                </div>
-            </div>-->
         </div>
     </div>
 
