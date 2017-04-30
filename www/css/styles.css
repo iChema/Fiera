@@ -21,3 +21,15 @@
 #titulo-fiera {
     margin-left: 25%;
 }
+
+.panel-left {
+    background-color: black;
+}
+
+.datos {
+    color: white;
+}
+
+.content-block-title {
+    color: gray;
+}
